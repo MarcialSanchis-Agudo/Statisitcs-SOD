@@ -8,8 +8,8 @@ p = 17
 per = 13
 theta = np.linspace(0, np.pi, p + per)
 y = -np.cos(theta)+1
-Lx = math.pi
-Lz = (math.pi)/2
+Lx = 2*(math.pi)
+Lz = (math.pi)
 print(range(p))
 # Plot the points
 plt.plot(np.zeros_like(y), y, marker='o', linestyle='-', color='b', label='1D Line Points')
@@ -27,7 +27,7 @@ geo_filename = "line.geo"
 with open(geo_filename, "w") as geo_file:
     # Write the additional code
     geo_file.write("// Additional parameters\n")
-    geo_file.write("d0 = 1.0; pi = 3.14159265359; Lx = pi; Ly = 2; Lz = (pi/2)*d0;\n")
+    geo_file.write("d0 = 1.0; pi = 3.14159265359; Lx = 2*pi; Ly = 2; Lz = (pi)*d0;\n")
     geo_file.write("Nx = 15; Nz = 25; s = d0; //Main box\n")
     # Write the Gmsh script for the 1D line
     geo_file.write("// 1D Line\n")
