@@ -4,9 +4,8 @@ import math
 
 # Define the points on the 1D line
 
-p_1 = 8
-per_1 = 1
-ny = p_1 + per_1
+p_1 = 18
+ny = p_1
 
 # Define power-law function parameters
 a = 0.04  # First y point
@@ -29,8 +28,8 @@ plt.title('1D Line Points')
 plt.legend()
 plt.grid(True)
 plt.show()
-Lx = (math.pi)
-Lz = (math.pi)/2
+Lx = 2*(math.pi)
+Lz = (math.pi)
 p = 17
 per = len(y) - p
 
@@ -41,8 +40,8 @@ geo_filename = "line.geo"
 with open(geo_filename, "w") as geo_file:
     # Write the additional code
     geo_file.write("// Additional parameters\n")
-    geo_file.write("d0 = 1.0; pi = 3.14159265359; Lx = pi; Ly = 2; Lz = (pi/2)*d0;\n")
-    geo_file.write("Nx = 23; Nz = 25; s = d0; //Main box\n")
+    geo_file.write("d0 = 1.0; pi = 3.14159265359; Lx = 2*pi; Ly = 2; Lz = (pi)*d0;\n")
+    geo_file.write("Nx = 40; Nz = 40; s = d0; //Main box\n")
     # Write the Gmsh script for the 1D line
     geo_file.write("// 1D Line\n")
 
