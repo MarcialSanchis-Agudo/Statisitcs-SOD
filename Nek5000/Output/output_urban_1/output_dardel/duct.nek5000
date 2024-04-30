@@ -1,0 +1,3 @@
+filetemplate: duct%01d.f%05d
+firsttimestep: 59
+numtimesteps: 40
