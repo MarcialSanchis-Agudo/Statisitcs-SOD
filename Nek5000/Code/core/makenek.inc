@@ -142,7 +142,7 @@ FCcomp=`cat .tmp | awk '{print $1}' | awk -F/ '{print $NF}' || true`
 if [ -f "`which $FCcomp 2>/dev/null`" ]; then
   FCok=1
 fi
-
+echo $FCcomp
 if [ $FCok -eq 0 ]; then
   FCcomp_=`$FC -show 2>/dev/null | head -1 2>/dev/null 1>.tmp || true`
   FCcomp=`cat .tmp | awk '{print $1}' | awk -F/ '{print $NF}' || true`

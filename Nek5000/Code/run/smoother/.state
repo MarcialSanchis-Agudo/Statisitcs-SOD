@@ -1,0 +1,6 @@
+SOURCE_ROOT=/home/ulfur/kth/master_thesis/Nek5000/Code
+FC=mpif77
+FFLAGS=-std=legacy -fdefault-real-8 -fdefault-double-8 -cpp
+CC=mpicc
+CFLAGS=-std=legacy
+PPLIST= MPI UNDERSCORE TIMER
