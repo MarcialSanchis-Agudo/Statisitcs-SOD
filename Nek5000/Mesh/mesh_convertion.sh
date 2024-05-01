@@ -1,9 +1,9 @@
 #!/bin/bash
 
-outdir="IR21"
+outdir="BL_new_output"
 
 
-geo_out="${outdir}/IR21.geo"
+geo_out="${outdir}/BL_new-v_01.geo"
 mesh_info_json="${outdir}/mesh_info.json"
 bc_json="${outdir}/bc.json"
 
@@ -24,7 +24,7 @@ order="2" # from 1 to 5
 mformat="msh2" 
 
 # OUTPUTS
-mesh_out="${outdir}/IR21.msh"
+mesh_out="${outdir}/BL_new.msh"
 
 sudo docker run -i -v `pwd`:`pwd` -w `pwd` avidalto/nek5000:v25 /bin/bash \
     gmsh_gen/main.sh \
@@ -45,8 +45,8 @@ mformat="1" # 1 = ASCII file and 2 = binary file
 meshtol="0.2"
 
 # OUTPUTS
-obstacle_re2="${outdir}/IR21.re2"
-obstacle_ma2="${outdir}/IR21.ma2"
+obstacle_re2="${outdir}/BL_new.re2"
+obstacle_ma2="${outdir}/BL_new.ma2"
 
 sudo docker run -i -v `pwd`:`pwd` -w `pwd` avidalto/nek5000:v25 /bin/bash \
     gmsh2nek/main.sh \
