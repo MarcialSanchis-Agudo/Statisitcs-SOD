@@ -12,11 +12,11 @@ addpath matFunctions/
 
 %%% create output folder for stat interpolation: 
 %%% mkdir ../run_interp3d/ZSTAT/
-%PATH_OUTPUT='../run_interp3d/ZSTAT/';
+PATH_OUTPUT='../run_interp3d/ZSTAT/';
 
 %%% create output folder for snapshots interpolation: 
 %%% mkdir ../run_historyInt/ZSTAT/
- PATH_OUTPUT='../run_historyInt/ZSTAT/';
+ % PATH_OUTPUT='../run_historyInt/ZSTAT/';
 
 
 %% Create mesh
@@ -24,8 +24,8 @@ addpath matFunctions/
 
 step=0.01;
 
-xx=0.25:step:2.25;
-yy=0:step:2;
+xx=-10:step:6;
+yy=0:step:2.25;
 zz=0;
 
 Nx = length(xx);

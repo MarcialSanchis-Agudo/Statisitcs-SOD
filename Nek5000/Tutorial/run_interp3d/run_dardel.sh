@@ -6,8 +6,10 @@
 
 
 # create a mesh for interpolation first
-#cp ../run_post3d/a* ZSTAT/
-#cp ../run_post3d/b* ZSTAT/
+cp ../run_tutorial/duct.ma2 .
+cp ../run_tutorial/duct.re2 .
+cp ../run_post3d/a* ZSTAT/
+cp ../run_post3d/b* ZSTAT/
 
 casename=duct
 rm  -f $casename.sch
@@ -16,14 +18,14 @@ echo $PWD/ >> SESSION.NAME
 
 rm log_*
 
-srun -n 256 ./nek5000a | tee log_01a.txt
+srun -n 128 ./nek5000a | tee log_01a.txt
 
 rm -rf output_a
 mkdir output_a
 mv ZSTAT/L* ZSTAT/U* ZSTAT/V* ZSTAT/W* output_a
 mv history2.txt output_a
 
-srun -n 256 ./nek5000b | tee log_01b.txt
+srun -n 128 ./nek5000b | tee log_01b.txt
 
 rm -rf output_b
 mkdir output_b

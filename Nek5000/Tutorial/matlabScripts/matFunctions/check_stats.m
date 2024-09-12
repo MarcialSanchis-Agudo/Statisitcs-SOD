@@ -1,5 +1,4 @@
 
-clc
 
 disp([' ',num2str(min(stat_a.U)),' ',num2str(max(stat_a.U))])
 disp([' ',num2str(min(stat_a.V)),' ',num2str(max(stat_a.V))])
