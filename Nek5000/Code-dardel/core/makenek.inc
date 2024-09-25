@@ -76,20 +76,16 @@ fi
 
 if [[ $1 = "clean" ]]; then
   while true; do
-    # read -p "do you want to clean all 3rd party software? [Y]" yn
-    # case $yn in
-      # [Nn]* )
-        # make clean;
-        # break ;;
-      # * ) 
-        # clean_3rd_party; 
-        # make clean;
-        # break ;;
-    # esac
-    clean_3rd_party;
-    make clean;
-    echo "Cleaned"
-    break
+    read -p "do you want to clean all 3rd party software? [N]" yn
+    case $yn in
+      [Yy]* )
+        clean_3rd_party; 
+        make clean;
+        break ;;
+      * ) 
+        make clean;
+        break ;;
+    esac
   done
   rm -rf compiler.out
   rm -rf makefile
@@ -146,7 +142,7 @@ FCcomp=`cat .tmp | awk '{print $1}' | awk -F/ '{print $NF}' || true`
 if [ -f "`which $FCcomp 2>/dev/null`" ]; then
   FCok=1
 fi
-echo $FCcomp
+
 if [ $FCok -eq 0 ]; then
   FCcomp_=`$FC -show 2>/dev/null | head -1 2>/dev/null 1>.tmp || true`
   FCcomp=`cat .tmp | awk '{print $1}' | awk -F/ '{print $NF}' || true`

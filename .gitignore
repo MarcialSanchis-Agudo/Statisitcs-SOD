@@ -8,3 +8,4 @@ Nek5000/Tutorial/run_interp3d/output_b_*
 Nek5000/Tutorial/run_post3d/*
 Nek5000/Output/*
 Presentations/*
+slurm*

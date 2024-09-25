@@ -1,6 +1,6 @@
 #!/bin/bash
 export CASE="duct"
-export SOURCE_ROOT="/cfs/klemming/scratch/w/walesiak/Nek5000/Code-dardel"
+export SOURCE_ROOT="/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code"
 export FC="ftn" #Dardel uses different compiler ftn
 export CC="cc" #cc
 export CFLAGS="-std=legacy -mcmodel=large"

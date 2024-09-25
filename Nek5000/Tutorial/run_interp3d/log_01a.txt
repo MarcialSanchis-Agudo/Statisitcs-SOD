@@ -18,7 +18,7 @@
  Number of processors:         128
  REAL    wdsize      :           8
  INTEGER wdsize      :           4
- Timer accuracy      : 1.68E-07
+ Timer accuracy      : 1.38E-07
   
  Reading /cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Tutorial/run_interp3d/duct.par                                              
 general = [(null)]
@@ -95,12 +95,12 @@ _tripping:tdt02 = [0.08000000E+00]
  Reading /cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Tutorial/run_interp3d/duct.ma2                                              
   
  element load imbalance:            1         364         365
- done :: mapping   0.39218E-01 sec
+ done :: mapping   0.76949E-01 sec
 
   
   preading mesh 
   preading bc for ifld           1
- done :: read .re2 file   0.59E-01 sec
+ done :: read .re2 file   0.13     sec
 
  nelgt/nelgv/lelt:       46656       46656         627
  lx1  /lx2  /lx3 :           8           6           8
@@ -111,12 +111,12 @@ _tripping:tdt02 = [0.08000000E+00]
  done :: usrsetvert
 
 gs_setup: 1054344 unique labels shared
-   pairwise times (avg, min, max): 0.000362722 0.000329344 0.000379714
-   crystal router                : 0.00188 0.00184364 0.00192381
+   pairwise times (avg, min, max): 0.000358689 0.000326796 0.000374853
+   crystal router                : 0.00192832 0.00187813 0.00196433
    used all_to_all method: pairwise
    handle bytes (avg, min, max): 1.48837e+06 1348204 1607532
    buffer bytes (avg, min, max): 283659 170160 409456
-   setupds time 2.5968E-01 seconds   0  8     6020694       46656
+   setupds time 2.5591E-01 seconds   0  8     6020694       46656
            8  max multiplicity
  done :: setup mesh topology
   
@@ -190,7 +190,7 @@ gs_setup: 1054344 unique labels shared
 gridpoints unique/tot:      16098390     23887872
   dofs:             15939504             10077696
   
- Initialization successfully completed    1.4227     sec
+ Initialization successfully completed    1.3839     sec
 
  nsteps=0 -> skip time loop
  running solver in post processing mode
@@ -204,14 +204,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a01duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  1262.8MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1216.5MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.21141E-01 -0.14950     -0.20949       0.0000       0.0000    
+ uvwpt min   0.0000     -0.57485E-01 -0.52528E-01   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   1.3337      0.16685      0.18578       0.0000       0.0000    
+ uvwpt max   1.0002      0.91874E-01  0.67021E-01   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -219,7 +219,7 @@ gridpoints unique/tot:      16098390     23887872
   
  done :: set initial conditions
   
- found                   617  points in interp. mesh
+ found                  2827  points in interp. mesh
  initializing intpts(), tol=   1.0000000000000000E-013
  **FIELD,Time           2   0.0000000000000000     
  set initial conditions
@@ -228,14 +228,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a02duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  1012.8MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1348.0MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.13170E-04 -0.38030E-11 -0.46586E-01   0.0000       0.0000    
+ uvwpt min -0.69134E-12   0.0000     -0.24414E-01   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.10322      0.31037      0.10792E-01   0.0000       0.0000    
+ uvwpt max  0.72869E-01  0.18707      0.38712E-03   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -250,14 +250,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a03duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  1351.1MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1142.8MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.31729E-01 -0.90938E-01  0.50542E-20   0.0000       0.0000    
+ uvwpt min -0.15571E-01 -0.66905E-01  0.53222E-19   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.28411E-01  0.86392E-01  0.13994       0.0000       0.0000    
+ uvwpt max  0.14863E-01  0.42687E-01  0.96025E-01   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -272,14 +272,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a04duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  1120.8MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1546.6MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.36359E-05 -0.58698E-01 -0.11355E-01   0.0000       0.0000    
+ uvwpt min  0.27441E-37 -0.11770E-01 -0.48302E-02   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.71349E-01  0.41738      0.27471E-01   0.0000       0.0000    
+ uvwpt max  0.29498E-01  0.38938E-02  0.12377E-01   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -294,14 +294,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a05duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  1959.1MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2113.6MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.15521E-01 -0.19958E-01 -0.23138E-01   0.0000       0.0000    
+ uvwpt min -0.19547E-02 -0.11299E-02 -0.45929E-02   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.40166E-01  0.25092E-01  0.16470E-02   0.0000       0.0000    
+ uvwpt max  0.52455E-02  0.13494E-02  0.14542E-02   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -316,14 +316,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a06duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2176.6MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2087.4MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.22359E-01 -0.14058E-01 -0.49481E-02   0.0000       0.0000    
+ uvwpt min -0.24384E-02 -0.67727E-02 -0.66304E-03   0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.11548E-01  0.16391E-01  0.51297E-02   0.0000       0.0000    
+ uvwpt max  0.15297E-01  0.74058E-02  0.72969E-03   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -338,14 +338,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a07duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2191.0MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2146.8MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -3.3021      -17.097      -3.6869       0.0000       0.0000    
+ uvwpt min  -1.3881      -3.2349      -1.4844       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   2.7987       3.3523      0.65389       0.0000       0.0000    
+ uvwpt max  0.62682       1.7616      0.79445E-01   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -360,14 +360,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a08duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2190.8MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2139.6MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -1.1743      -5.8244      -5.6211       0.0000       0.0000    
+ uvwpt min -0.50947      -4.3192      -4.4035       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   1.2464      0.19574      0.48356E-02   0.0000       0.0000    
+ uvwpt max  0.51882      0.17982E-06  0.16360E-11   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -382,14 +382,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a09duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2157.9MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2129.9MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.19823      -2.0861      -2.2313       0.0000       0.0000    
+ uvwpt min -0.79698E-01  -1.1312      -1.4333       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   4.4029       2.8973       1.8930       0.0000       0.0000    
+ uvwpt max   2.3230       1.1364       1.4547       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -404,14 +404,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a10duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2190.7MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2158.4MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -3.8035      -5.1286      -3.7583       0.0000       0.0000    
+ uvwpt min  -2.2234      -3.3328      -1.1802       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   5.2601       8.9789       4.6475       0.0000       0.0000    
+ uvwpt max   1.6660       2.1832       1.0410       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -426,14 +426,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a11duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2189.2MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2153.3MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -3.6944      -1.6130      -1.1428       0.0000       0.0000    
+ uvwpt min -0.65522      -1.1774     -0.63964       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   3.4316       7.4764       7.0684       0.0000       0.0000    
+ uvwpt max  0.85603       6.5169       3.8183       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -448,14 +448,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a12duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2160.9MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2149.8MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -4.2168      -2.7958      -3.0643       0.0000       0.0000    
+ uvwpt min  -3.1516      -1.7211      -1.5775       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.74466       3.0747       2.9742       0.0000       0.0000    
+ uvwpt max  0.49790       1.6389       1.5529       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -470,14 +470,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a13duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2205.4MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2165.7MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -7.5266      -2.4520      -1.5124       0.0000       0.0000    
+ uvwpt min  -2.3096      -1.3102     -0.72261       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   8.0197       17.949       1.8641       0.0000       0.0000    
+ uvwpt max   3.3084       9.7719       1.2679       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -492,14 +492,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a14duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2199.7MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1795.2MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -3.2896      -2.6044      -1.5505       0.0000       0.0000    
+ uvwpt min -0.58391     -0.54934     -0.43913       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   4.2947       3.0098       1.4352       0.0000       0.0000    
+ uvwpt max  0.54875      0.41537      0.37806       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -514,14 +514,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a15duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2196.2MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1563.9MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -1.8268      -1.2359     -0.71771       0.0000       0.0000    
+ uvwpt min -0.23048     -0.11923     -0.13398       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   1.7614      0.87564      0.93125       0.0000       0.0000    
+ uvwpt max  0.32094      0.71547E-01  0.88465E-01   0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -536,14 +536,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a16duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2185.1MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2166.9MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -42.237      -4.6159      -8.8311       0.0000       0.0000    
+ uvwpt min  -24.660      -2.1584      -4.6991       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.56041E-01   3.6968       39.497       0.0000       0.0000    
+ uvwpt max  0.81269E-07   2.1358       22.003       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -558,14 +558,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a17duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2177.9MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2134.0MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -4.0242      -9.5438     -0.65053       0.0000       0.0000    
+ uvwpt min  -1.7650      -5.2826     -0.34559       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   3.3283       7.1896      0.92776       0.0000       0.0000    
+ uvwpt max   1.0041       1.9433      0.23824       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -580,14 +580,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a18duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2185.3MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2198.1MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -8.0322      -20.053      -1.6255       0.0000       0.0000    
+ uvwpt min -0.98699      -8.5393     -0.34805       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   13.654       15.185      0.91228       0.0000       0.0000    
+ uvwpt max   5.7903       9.0789      0.36914       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -602,14 +602,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a19duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2204.1MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2160.0MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min -0.99215      -103.01      -13.481       0.0000       0.0000    
+ uvwpt min -0.35609      -41.577      -5.9698       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.56515       25.946       3.0148       0.0000       0.0000    
+ uvwpt max  0.19600       7.6990       1.1781       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -624,14 +624,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a20duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2171.3MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2024.4MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -1.8886      -44.374      -2.7815       0.0000       0.0000    
+ uvwpt min -0.33281      -13.092      -1.6161       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max  0.94135       32.867       3.1965       0.0000       0.0000    
+ uvwpt max  0.30099       16.063       2.0703       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -646,14 +646,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a21duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2200.8MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  2157.5MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -9.5014      -2.0711      -28.671       0.0000       0.0000    
+ uvwpt min  -5.4348      -1.1349      -21.258       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   10.562       2.2527       56.052       0.0000       0.0000    
+ uvwpt max   5.4025       1.3482       21.383       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -668,14 +668,14 @@ gridpoints unique/tot:      16098390     23887872
  Reading checkpoint data 
        FILE:ZSTAT/a22duct0.f00001                                                                                                               
 
-        0  3.8000E+01 done :: Read checkpoint data
-                              avg data-throughput =  2204.4MBps
+        0  2.0000E+02 done :: Read checkpoint data
+                              avg data-throughput =  1790.9MBps
                               io-nodes =   128
 
  xyz min    -10.000       0.0000      -1.4000    
- uvwpt min  -2.0128      -132.06      -13.746       0.0000       0.0000    
+ uvwpt min -0.66012      -28.763      -7.4559       0.0000       0.0000    
  xyz max     6.0000       2.2500       1.4000    
- uvwpt max   2.1145       102.79       27.271       0.0000       0.0000    
+ uvwpt max  0.76684       34.116       8.6468       0.0000       0.0000    
  Restart: recompute geom. factors.
  regenerate geometry data           1
  NOTE: All elements deformed , param(59) ^=0
@@ -688,9 +688,9 @@ gridpoints unique/tot:      16098390     23887872
 an error occured: dying ...
   
   
-total elapsed time             :   1.79602E+01 sec
+total elapsed time             :   1.82794E+01 sec
 total solver time w/o IO       :   0.00000E+00 sec
 time/timestep                  :   0.00000E+00 sec
 avg throughput per timestep    :   0.00000E+00 gridpts/CPUs
-total max memory usage         :   4.83048E+01 GB
+total max memory usage         :   4.80401E+01 GB
 

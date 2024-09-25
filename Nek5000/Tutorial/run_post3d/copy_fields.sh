@@ -18,7 +18,7 @@ i_total_snap_file=0
 for i_folder in $STAT_FOLDER
 do
 
-	for i_local_stat in {2..3}
+	for i_local_stat in {2..6}
 	do
         printf -v N_FILE "%05d" $i_local_stat
 		TEST_FILE=$INPUT_PATH/$i_folder/s01duct0.f$N_FILE
@@ -35,7 +35,7 @@ do
             		printf -v NS "%02d" $i_s
             		COPY_FROM0=$INPUT_PATH/$i_folder/s${NS}duct0.f$N_FILE
             		COPY_TO0=$OUTPUT_PATH/s${NS}duct0.f$LAST
-            		#echo "$COPY_FROM0 copied in $COPY_TO0"
+            		echo "$COPY_FROM0 copied in $COPY_TO0"
             		cp $COPY_FROM0 $COPY_TO0
         		done
 
@@ -46,7 +46,7 @@ do
             		printf -v NT "%02d" $i_t
             		COPY_FROM0=$INPUT_PATH/$i_folder/t${NT}duct0.f$N_FILE
             		COPY_TO0=$OUTPUT_PATH/t${NT}duct0.f$LAST
-            		#echo "$COPY_FROM0 copied in $COPY_TO0"
+            		echo "$COPY_FROM0 copied in $COPY_TO0"
             		cp $COPY_FROM0 $COPY_TO0
         		done
 		else

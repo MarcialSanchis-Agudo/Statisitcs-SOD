@@ -6,16 +6,17 @@
 
 
 export CASE="duct"
-export SOURCE_ROOT="../../Nek5000_framework"
+export SOURCE_ROOT="/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code"
+
 export FC="ftn"
 export CC="cc"
 #export CFLAGS="-std=legacy -mcmodel=large"
 #export FFLAGS="-std=legacy -fallow-argument-mismatch -O2 -mcmodel=large"
-export CFLAGS="-std=legacy"
-export FFLAGS="-std=legacy"
+export CFLAGS="-std=legacy -mcmodel=large"
+export FFLAGS="-std=legacy -mcmodel=large"
 
 export PPLIST=""
-export USR="frame.o frame_usr.o io_tools_block.o io_tools.o mntrlog_block.o mntrlog.o mntrtmr_block.o mntrtmr.o rprm_block.o rprm.o map2D.o stat.o stat_IO.o chkpoint.o chkpt_mstp.o trip.o"
+export USR="frame.o frame_usr.o io_tools_block.o io_tools.o mntrlog_block.o mntrlog.o mntrtmr_block.o mntrtmr.o rprm_block.o rprm.o map2D.o stat.o stat_IO.o chkpoint.o trip.o"
 
 for il in "$@"
 do

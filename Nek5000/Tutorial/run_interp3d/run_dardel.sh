@@ -6,10 +6,10 @@
 
 
 # create a mesh for interpolation first
-cp ../run_tutorial/duct.ma2 .
-cp ../run_tutorial/duct.re2 .
-cp ../run_post3d/a* ZSTAT/
-cp ../run_post3d/b* ZSTAT/
+# cp ../run_tutorial/duct.ma2 .
+# cp ../run_tutorial/duct.re2 .
+cp -uv ../run_post3d/a* ZSTAT/
+cp -uv ../run_post3d/b* ZSTAT/
 
 casename=duct
 rm  -f $casename.sch

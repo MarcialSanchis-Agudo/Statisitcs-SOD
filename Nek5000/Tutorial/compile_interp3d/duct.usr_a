@@ -162,7 +162,6 @@ c-----------------------------------------------------------------------
          endif
       enddo
       nnhis = gnnhis(nid+1)
-
       do i_point=1,nnhis
          if (mod(n_g,lp).eq.0) then
             i_buff = nnhis*nid+i_point

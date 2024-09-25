@@ -1,23 +1,23 @@
-### makefile automatically created by makenek 02/17/2023 10:09:00 ###
+### makefile automatically created by makenek 09/14/2024 22:25:38 ###
 BINNAME=nek5000
 LIBNAME=libnek5000.a
 CASENAME:=duct
-CASEDIR:=/scratch/gzampino/Tutorials/UrbanFlowCases-main/compile_post3d
-S:=/scratch/gzampino/Nek5000/core
-SCMT:=/scratch/gzampino/Nek5000/core/cmt
+CASEDIR:=/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Tutorial/compile_post3d
+S:=/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code/core
+SCMT:=/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code/core/cmt
 OPT_INCDIR=./
 OBJDIR=obj
 MPI:=1
 CMT:=0
 NEKNEK:=0
-FC:=mpif77
-CC:=mpicc
-FFLAGS:=-std=legacy -fdefault-real-8 -fdefault-double-8 -cpp
-CFLAGS:=-std=legacy
+FC:=ftn
+CC:=cc
+FFLAGS:=-std=legacy -mcmodel=large -fdefault-real-8 -fdefault-double-8 -cpp
+CFLAGS:=-std=legacy -mcmodel=large
 PPPO=
 PPS= MPI UNDERSCORE TIMER
-USR:=frame.o frame_usr.o io_tools_block.o io_tools.o mntrlog_block.o mntrlog.o mntrtmr_block.o mntrtmr.o rprm_block.o rprm.o map2D.o stat.o stat_IO.o trip.o
-USR_LFLAGS:= -L/scratch/gzampino/Nek5000/3rd_party/gslib/lib -lgs
+USR:=frame.o frame_usr.o io_tools_block.o io_tools.o mntrlog_block.o mntrlog.o mntrtmr_block.o mntrtmr.o rprm_block.o rprm.o map2D.o stat.o stat_IO.o chkpoint.o trip.o
+USR_LFLAGS:= -L/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code/3rd_party/gslib/lib -lgs
 VISIT:=0
 VISIT_IFLAGS=
 VISIT_LFLAGS=

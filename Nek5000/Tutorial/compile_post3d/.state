@@ -1,0 +1,6 @@
+SOURCE_ROOT=/cfs/klemming/scratch/w/walesiak/Statisitcs-SOD/Nek5000/Code
+FC=ftn
+FFLAGS=-std=legacy -mcmodel=large -fdefault-real-8 -fdefault-double-8 -cpp
+CC=cc
+CFLAGS=-std=legacy -mcmodel=large
+PPLIST= MPI UNDERSCORE TIMER

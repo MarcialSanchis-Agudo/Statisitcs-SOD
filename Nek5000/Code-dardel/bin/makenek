@@ -4,7 +4,7 @@
 #-------------------------------------------------------------------------------
 
 # source path 
-#SOURCE_ROOT="/home/ulfur/kth/master_thesis/Nek5000/Code" 
+# SOURCE_ROOT="/home/caronte/UrbanFlows/fromRicardo/Nek5000_framework" 
 
 # Fortran/C compiler
 #FC="mpif77"
@@ -18,8 +18,8 @@
 #-------------------------------------------------------------------------------
 
 # optional compiler flags
-#FFLAGS="-std=legacy"
-#CFLAGS="-std=legacy"
+#FFLAGS=""
+#CFLAGS=""
 
 # optional linking flags
 #USR_LFLAGS+=" -L/usr/lib -lfoo"
@@ -53,7 +53,7 @@ set -e
 mver=17.0.4
 
 # set defaults
-: ${SOURCE_ROOT:="$HOME/kth/master_thesis/Nek5000/Code"}
+: ${SOURCE_ROOT:="$HOME/Nek5000"}
 : ${FC:="mpif77"}
 : ${CC:="mpicc"}
 : ${MPI:=1}
@@ -71,7 +71,7 @@ fi
 source $SOURCE_ROOT/core/makenek.inc
 
 # compile 3rd_party code
-make_3rd_party 2>&1 | tee -a compiler.out\
+make_3rd_party 2>&1 | tee -a compiler.out
 
 # compile nek
 make -j4 -f makefile 2>&1 | tee -a compiler.out

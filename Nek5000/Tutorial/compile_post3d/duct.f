@@ -193,12 +193,12 @@ c-----------------------------------------------------------------------
       real STATS_TEMP(lx1*ly1*lz1*lelt,STAT_LVAR)
       real STAT(lx1*ly1*lz1*lelt,STAT_LVAR)
 
-      last_file=4               ! Index of the last file
-      first_file=2              ! Index of the first file
+      last_file=85               ! Index of the last file
+      first_file=1              ! Index of the first file
       nfiles=last_file-first_file           ! Number of stat tiles
       nu=1/10000.0               ! Kinematic viscosity
       rho=1.0                   ! Fluid density
-      mtimes=3.8649435E+01      ! Starting time CHANGE
+      mtimes=0.3199999999998E+02      ! Starting time CHANGE
 
       if (nid.eq.0) write(*,*) 'nfiles=',nfiles
 
@@ -245,7 +245,7 @@ c-----------------------------------------------------------------------
          ltime=mtimes           ! Time of last field
          ftime=0.0              ! Time of current field
          fttime=0.0             ! Total accumulated time
-         do ssf = 1,nfiles
+         do ssf = first_file,last_file
 
             write(pippo,'(i5.5)') ssf
             inputname2 = 'STAT3D/t'//trim(pippa)//'duct0.f'//
