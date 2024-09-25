@@ -11,7 +11,7 @@ addpath matFunctions/
 %% Setup info
 
 PATH_MESH='../run_interp3d/ZSTAT/';
-for i = 1:75
+for i = 1:85
     PATH_INTa=['../run_interp3d/output_a_full_',num2str(i),'/'];
     PATH_INTb=['../run_interp3d/output_b_full_',num2str(i), '/'];
 
@@ -101,7 +101,7 @@ for i = 1:length(stat_a)
 
     k_total(i) = sum(k(:,i));
 end
-t_plot = 32:2:180;
+t_plot = 32:2:200;
 figure()
 plot(t_plot, k_total)
 title('k')
@@ -127,7 +127,7 @@ title('max W')
 
 
 [XX,YY]=meshgrid(xx,yy);
-index_plot = 75;
+index_plot = 85;
 U= reshape(stat_a(index_plot).U,[Ny, Nx]);
 V= reshape(stat_a(index_plot).V,[Ny, Nx]);
 W= reshape(stat_a(index_plot).W,[Ny, Nx]);
@@ -354,8 +354,9 @@ ylabel('$y$','FontSize',16,'Interpreter','latex')
 % xlabel('$T$','FontSize',16,'Interpreter','latex')
 % ylabel('$\varepsilon_{duct}$','FontSize',16,'Interpreter','latex')
 
+% save('output_full_convergence.mat', '-v7.3')
 %% Convergence velocity
-
+% load('output_full_convergence.mat')
 
 U_prev = reshape(stat_a(1).U, [Ny, Nx]);
 V_prev = reshape(stat_a(1).V, [Ny, Nx]);
@@ -388,7 +389,7 @@ rms_resk_domain = zeros(length(stat_a)-1,1);
 l2_resk_domain = zeros(length(stat_a)-1,1);
 
 x_start = -7;
-y_end = 1;
+y_end = 0.5;
 for i = 2:length(stat_a)
 
     dUdy = reshape(stat_a(i).dUdy, [Ny, Nx]);
@@ -443,18 +444,19 @@ end
 
 x_plot_index = round(Nx/4);
 y_plot_index = round(Ny/10);
-t_plot = 34:2:180;
+t_plot = 34:2:200;
 
 figure();
-semilogy(t_plot, max_resk_domain);
+plot(t_plot, max_resk_domain);
 grid on;
 title('Convergance $Resk$','FontSize',16,'Interpreter','latex')
 xlabel('$T$','FontSize',16,'Interpreter','latex')
 ylabel('$max|Resk|$','FontSize',16,'Interpreter','latex')
 
 figure();
-semilogy(t_plot, rms_resk_domain);
+plot(t_plot, rms_resk_domain);
 grid on;
 title('Convergance $Resk$','FontSize',16,'Interpreter','latex')
 xlabel('$T$','FontSize',16,'Interpreter','latex')
 ylabel('$rms(Resk)$','FontSize',16,'Interpreter','latex')
+
